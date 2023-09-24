@@ -14,7 +14,33 @@ Weapon::Weapon(string name, WeaponType weaponType, float attack, float critRate,
     this->critDamage = critDamage;
 }
 
+Weapon::~Weapon()
+{
+
+}
+
 float Weapon::GetDamage(AttacType attackType, float critRateReduction, bool isCrit)
 {
+    switch (attackType)
+    {
+    case AttacType::Fast:
+    {
+
+
+        break;
+    }
+    case AttacType::Normal:
+    {
+
+
+        break;
+    }
+    case AttacType::Charged:
+    {
+
+
+        break;
+    }
+    }
     return 0.0f;
 }

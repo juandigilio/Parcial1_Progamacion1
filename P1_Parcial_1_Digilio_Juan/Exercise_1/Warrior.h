@@ -13,8 +13,8 @@ class Warrior
 private:
 
 	string name;
-	Weapon weapon;
-	Armor armor;
+	Weapon* weapon;
+	Armor* armor;
 	float maxHealth;
 	float currentHealth;
 
@@ -24,11 +24,11 @@ public:
 	Warrior(string name, float maxHealth);
 	~Warrior();
 
-	void SetWeapon(Weapon weapon);
-	void SetArmor(Armor armor);
+	void SetWeapon(Weapon* weapon);
+	void SetArmor(Armor* armor);
 	string GetName();
 	float RecieveDamage(float damage);
-	float Attack(Warrior warrior, AttacType attackType, bool isCrit);
+	float Attack(Warrior warrior, AttacType attackType);
 	float GetCurrentHealth();
 	bool IsAlive();
 };

@@ -5,12 +5,13 @@ Armor::Armor()
 
 }
 
-Armor::Armor(string name, ArmorType armorType, float defense, float weight)
+Armor::Armor(string name, ArmorType armorType, float defense, float weight, float criticalRateReduction)
 {
     this->name = name;
     this->armorType = armorType;
     this->defense = defense;
     this->weight = weight;
+    this->critRateReduction = criticalRateReduction;
 }
 
 Armor::~Armor()
@@ -19,10 +20,19 @@ Armor::~Armor()
 
 float Armor::GetDmgReductionPerc(float damage)
 {
-    return 0.0f;
+    float damageReduction = 0.8f / (damage / defense);
+
+    if (damageReduction > 0.8f)
+    {
+        damageReduction = 0.8f;
+    }
+
+    damage -= (damage * damageReduction);
+
+    return damage;
 }
 
 float Armor::getCritRateReduction()
 {
-    return 0.0f;
+    return critRateReduction;
 }

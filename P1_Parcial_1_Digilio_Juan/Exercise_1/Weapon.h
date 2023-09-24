@@ -13,7 +13,9 @@ enum class WeaponType
 
 enum class AttacType
 {
-
+	Fast,
+	Normal,
+	Charged,
 };
 
 class Weapon
@@ -31,6 +33,7 @@ public:
 
 	Weapon();
 	Weapon(string name, WeaponType weaponType, float attack, float critRate, float critDamage);
+	~Weapon();
 
 	float GetDamage(AttacType attackType, float critRateReduction, bool isCrit);
 };
