@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Armor.h" />
+    <ClInclude Include="GameData.h" />
     <ClInclude Include="GameLogic.h" />
     <ClInclude Include="Warrior.h" />
     <ClInclude Include="WarriosSpawner.h" />

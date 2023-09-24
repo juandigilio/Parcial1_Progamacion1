@@ -2,12 +2,14 @@
 
 Warrior::Warrior()
 {
-    cout << "ggggggg";
+    
 }
 
 Warrior::Warrior(string name, float maxHealth)
 {
     this->name = name;
+    this->maxHealth = maxHealth;
+    currentHealth = maxHealth;
 }
 
 Warrior::~Warrior()
@@ -35,33 +37,9 @@ float Warrior::RecieveDamage(float damage)
     return currentHealth;
 }
 
-float Warrior::Attack(Warrior warrior, AttacType attackType)
+float Warrior::Attack(Warrior warrior, AttacType attackType, bool isCritic)
 {
-    float damage = weapon->GetDamage(); 
-
-
-    switch (attackType)
-    {
-        case AttacType::Fast:
-        {
-            
-
-            break;
-        }
-        case AttacType::Normal:
-        {
-
-
-            break;
-        }
-        case AttacType::Charged:
-        {
-
-
-            break;
-        }
-    }
-    return 0.0f;
+    return weapon->GetDamage(attackType, warrior.armor->getCritRateReduction(), isCritic);
 }
 
 float Warrior::GetCurrentHealth()

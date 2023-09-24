@@ -12,11 +12,10 @@ private:
 	Warrior* warrior;
 	Weapon* weapon;
 	Armor* armor;
-	string name;
 
 public:
 
-	WarriosSpawner();
+	WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor);
 	~WarriosSpawner();
 };
 
