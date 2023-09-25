@@ -36,6 +36,5 @@ public:
 	~Weapon();
 
 	float GetDamage(AttacType attackType, float critRateReduction, bool isCritic);
-	//float GetCriticalRate();
 };
 

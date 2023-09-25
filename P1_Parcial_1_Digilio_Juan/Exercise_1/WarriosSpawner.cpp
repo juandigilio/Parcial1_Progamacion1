@@ -4,7 +4,9 @@
 
 #include "GameData.h"
 
-WarriosSpawner::WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor)
+using namespace ConsoleData;
+
+WarriosSpawner::WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor, float delay)
 {
     this->warrior = warrior;
     this->weapon = weapon;
@@ -17,44 +19,40 @@ WarriosSpawner::WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor)
     string spear = "1-Spear";
     string sword = "2-Sword";
     string doubleHanded = "3-Double Handed";
-    int y = consoleHeight / 8;
+    int y = (consoleHeight / 2) - 1;
 
 	string nameInput;
 	char input;
 
+    DrawFrame(delay);
     
     SetCursor((consoleWide / 2) - (nameTXT.length() / 2), y);
-    y++;
 	cout << nameTXT;
 
-    SetCursor((consoleWide / 2), y);
-    y += 2;
+    SetCursor((consoleWide / 2 - 4), y + 1);
 	cin >> nameInput;
-
-    
 
 	warrior = new Warrior(nameInput, maxHealth);
 
+    system("cls");
+
+    DrawFrame(0);
+    
     SetCursor((consoleWide / 2) - (weaponTXT.length() / 2), y);
-    y++;
     cout << weaponTXT;
 
-    SetCursor((consoleWide / 2) - (spear.length() / 2), y);
-    y++;
+    SetCursor((consoleWide / 2) - (spear.length() / 2), y + 1);
     cout << spear;
 
-    SetCursor((consoleWide / 2) - (sword.length() / 2), y);
-    y++;
+    SetCursor((consoleWide / 2) - (sword.length() / 2), y + 2);
     cout << sword;
 
-    SetCursor((consoleWide / 2) - (doubleHanded.length() / 2), y);
-    y++;
+    SetCursor((consoleWide / 2) - (doubleHanded.length() / 2), y + 3);
     cout << doubleHanded;
 
-    SetCursor((consoleWide / 2), y);
 	do 
 	{
-        SetCursor((consoleWide / 2), y);
+        SetCursor((consoleWide / 2), y + 4);
         input = _getch();
 
 	} while (input != '1' && input != '2' && input != '3');
@@ -85,8 +83,6 @@ WarriosSpawner::WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor)
         }
     }
 
-    system("cls");
-
 
     string armorTXT = "Enter armor class...";
     string light = "1-light";
@@ -94,27 +90,25 @@ WarriosSpawner::WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor)
     string heavy = "3-Heavy";
 
 
-    y = consoleHeight / 8;
+    system("cls");
+    DrawFrame(0);
+
     SetCursor((consoleWide / 2) - (armorTXT.length() / 2), y);
-    y++;
     cout << armorTXT;
 
-    SetCursor((consoleWide / 2) - (light.length() / 2), y);
-    y++;
+    SetCursor((consoleWide / 2) - (light.length() / 2), y + 1);
     cout << light;
 
-    SetCursor((consoleWide / 2) - (medium.length() / 2), y);
-    y++;
+    SetCursor((consoleWide / 2) - (medium.length() / 2), y + 2);
     cout << medium;
 
-    SetCursor((consoleWide / 2) - (heavy.length() / 2), y);
-    y++;
+    SetCursor((consoleWide / 2) - (heavy.length() / 2), y + 3);
     cout << heavy;
 
 
     do
     {
-        SetCursor(consoleWide / 2, y);
+        SetCursor(consoleWide / 2, y + 4);
         input = _getch();
 
     } while (input != '1' && input != '2' && input != '3');
@@ -144,6 +138,8 @@ WarriosSpawner::WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor)
             break;
         }
     }
+
+    system("cls");
 }
 
 WarriosSpawner::~WarriosSpawner()

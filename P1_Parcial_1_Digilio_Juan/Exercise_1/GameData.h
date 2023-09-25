@@ -3,20 +3,22 @@
 #include <Windows.h>
 
 
-COORD cursorPosition;
-HANDLE hwnd;
-CONSOLE_FONT_INFOEX fontInfo;
-SMALL_RECT rect;
-COORD coord;
-CONSOLE_CURSOR_INFO cci;
-
-int consoleWide;
-int consoleHeight;
-int color;
-
-void SetCursor(int X, int Y)
+namespace ConsoleData
 {
-    cursorPosition.X = X;
-    cursorPosition.Y = Y;
-    SetConsoleCursorPosition(hwnd, cursorPosition);
+	extern COORD cursorPosition;
+	extern HANDLE hwnd;
+	extern CONSOLE_FONT_INFOEX fontInfo;
+	extern SMALL_RECT rect;
+	extern COORD coord;
+	extern CONSOLE_CURSOR_INFO cci;
+	 
+	extern int consoleWide;
+	extern int consoleHeight;
+	extern int color;
+
+	void SetCursor(int X, int Y);
+	void DrawFrame(float delay);
+	void SetConsoleSize();
+	void SetConsoleFont(int wide, int height);
 }
+

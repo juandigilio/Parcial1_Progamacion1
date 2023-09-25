@@ -1,6 +1,6 @@
 #pragma once
 
-#include "WarriosSpawner.h"
+#include "Warrior.h"
 
 
 
@@ -13,12 +13,10 @@ class GameLogic
 
 public:
 
-	GameLogic(WarriosSpawner* player1, WarriosSpawner* player2);
+	GameLogic(Warrior* player1, Warrior* player2);
 	~GameLogic();
 
-	void SetConsoleSize();
-	void SetConsoleFont(int wide, int height);
-	void DrawFrame();
+	void GameLoop(Warrior* player1, Warrior* player2);
 
 };
 

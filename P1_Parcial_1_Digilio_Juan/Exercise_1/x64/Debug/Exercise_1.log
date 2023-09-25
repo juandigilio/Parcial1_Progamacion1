@@ -1,0 +1,33 @@
+﻿  Armor.cpp
+  GameLogic.cpp
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\GameLogic.cpp(196,72): warning C4267: '=': conversion from 'size_t' to 'SHORT', possible loss of data
+  Main.cpp
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\Main.cpp(6,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Warrior.cpp
+  WarriosSpawner.cpp
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(26,60): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(38,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(42,58): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(46,58): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(50,65): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(98,61): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(102,58): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(106,59): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\WarriosSpawner.cpp(110,58): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Weapon.cpp
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\Weapon.cpp(29,28): warning C4305: '*=': truncation from 'double' to 'float'
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\Weapon.cpp(35,28): warning C4305: '*=': truncation from 'double' to 'float'
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\Weapon.cpp(42,28): warning C4305: '*=': truncation from 'double' to 'float'
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\Exercise_1\Weapon.cpp(50,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+WarriosSpawner.obj : error LNK2005: "void __cdecl SetCursor(int,int)" (?SetCursor@@YAXHH@Z) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "struct _COORD cursorPosition" (?cursorPosition@@3U_COORD@@A) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "void * hwnd" (?hwnd@@3PEAXEA) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "struct _CONSOLE_FONT_INFOEX fontInfo" (?fontInfo@@3U_CONSOLE_FONT_INFOEX@@A) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "struct _SMALL_RECT rect" (?rect@@3U_SMALL_RECT@@A) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "struct _COORD coord" (?coord@@3U_COORD@@A) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "struct _CONSOLE_CURSOR_INFO cci" (?cci@@3U_CONSOLE_CURSOR_INFO@@A) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "int consoleWide" (?consoleWide@@3HA) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "int consoleHeight" (?consoleHeight@@3HA) already defined in GameLogic.obj
+WarriosSpawner.obj : error LNK2005: "int color" (?color@@3HA) already defined in GameLogic.obj
+F:\Facultad\Programacion I\Parcial1_Prog1\P1_Parcial_1_Digilio_Juan\x64\Debug\Exercise_1.exe : fatal error LNK1169: one or more multiply defined symbols found

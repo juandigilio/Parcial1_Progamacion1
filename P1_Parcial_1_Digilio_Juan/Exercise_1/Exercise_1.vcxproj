@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Armor.cpp" />
+    <ClCompile Include="GameData.cpp" />
     <ClCompile Include="GameLogic.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Warrior.cpp" />
