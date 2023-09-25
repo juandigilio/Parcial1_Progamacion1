@@ -13,10 +13,10 @@ class GameLogic
 
 public:
 
-	GameLogic(Warrior* player1, Warrior* player2);
+	GameLogic(Warrior player1, Warrior player2);
 	~GameLogic();
 
-	void GameLoop(Warrior* player1, Warrior* player2);
+	void GameLoop(Warrior player1, Warrior player2);
 
 };
 

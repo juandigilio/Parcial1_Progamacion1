@@ -15,7 +15,10 @@ private:
 
 public:
 
-	WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor, float delay);
+	WarriosSpawner(float delay);
 	~WarriosSpawner();
+
+	Warrior GetWarrior();
+
 };
 

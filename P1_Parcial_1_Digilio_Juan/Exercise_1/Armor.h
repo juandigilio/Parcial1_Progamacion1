@@ -30,5 +30,7 @@ public:
 
 	float GetDmgReductionPerc(float damage);
 	float getCritRateReduction();
+	string GetName();
+	float GetDefense();
 };
 

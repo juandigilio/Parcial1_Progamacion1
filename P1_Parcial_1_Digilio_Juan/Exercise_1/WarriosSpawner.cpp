@@ -6,12 +6,8 @@
 
 using namespace ConsoleData;
 
-WarriosSpawner::WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor, float delay)
+WarriosSpawner::WarriosSpawner(float delay)
 {
-    this->warrior = warrior;
-    this->weapon = weapon;
-    this->armor = armor;
-
 	float maxHealth = 100.0f;
 
     string nameTXT = "Enter warrior name:";
@@ -140,11 +136,22 @@ WarriosSpawner::WarriosSpawner(Warrior* warrior, Weapon* weapon, Armor* armor, f
     }
 
     system("cls");
+    DrawFrame(0);
+
+    /*this->warrior = warrior;
+    this->weapon = weapon;
+    this->armor = armor;*/
 }
 
 WarriosSpawner::~WarriosSpawner()
 {
+    cout << "deleeeeeeteeeeeee";
     delete warrior;
     delete weapon;
     delete armor;
+}
+
+Warrior WarriosSpawner::GetWarrior()
+{
+    return *warrior;
 }

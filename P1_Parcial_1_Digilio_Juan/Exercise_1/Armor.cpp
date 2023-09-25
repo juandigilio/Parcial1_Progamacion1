@@ -36,3 +36,12 @@ float Armor::getCritRateReduction()
 {
     return critRateReduction;
 }
+
+string Armor::GetName()
+{
+    return name;
+}
+float Armor::GetDefense()
+{
+    return defense;
+}

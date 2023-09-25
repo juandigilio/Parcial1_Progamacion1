@@ -38,18 +38,21 @@ string Warrior::GetName()
 
 float Warrior::RecieveDamage(float damage)
 {
+    currentHealth -= damage;
     return currentHealth;
 }
 
-float Warrior::Attack(Warrior* warrior, AttacType attackType, bool isCritic)
+float Warrior::Attack(Warrior warrior, AttacType attackType, bool isCritic)
 {
-    float damageLanded = weapon->GetDamage(attackType, warrior->armor->getCritRateReduction(), isCritic);
+    float damageLanded{};
+
+    damageLanded = weapon->GetDamage(attackType, warrior.armor->getCritRateReduction(), isCritic);
 
     system("cls");
     DrawFrame(0.0f);
 
-    SetCursor((consoleWide / 2) - 4 - (name.length() / 2) - (warrior->GetName().length() / 2) - 3, consoleHeight / 4);
-    cout << name << " attacked " << warrior->GetName() << "...";
+    SetCursor((consoleWide / 2) - 4 - (name.length() / 2) - (warrior.GetName().length() / 2) - 3, consoleHeight / 4);
+    cout << name << " attacked " << warrior.GetName() << "...";
 
     string txt2 = "Attack point landed: ";
 
