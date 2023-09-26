@@ -14,7 +14,7 @@ namespace ConsoleData
 	extern COORD coord{};
 	extern CONSOLE_CURSOR_INFO cci{};
 	 
-	extern int consoleWide = 35;
+	extern int consoleWide = 50;
 	extern int consoleHeight = 35;
 	extern int color = 112;
 

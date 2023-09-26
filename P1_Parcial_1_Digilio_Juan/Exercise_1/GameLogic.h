@@ -16,7 +16,7 @@ public:
 	GameLogic(Warrior player1, Warrior player2);
 	~GameLogic();
 
-	void GameLoop(Warrior player1, Warrior player2);
 
+	void GetInput(Warrior& player1, Warrior& player2, bool isCritic);
 };
 

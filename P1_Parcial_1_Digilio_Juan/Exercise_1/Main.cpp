@@ -13,5 +13,4 @@ void main()
 	WarriosSpawner p2(0.0f);
 
 	GameLogic game(p1.GetWarrior(), p2.GetWarrior());
-
 }

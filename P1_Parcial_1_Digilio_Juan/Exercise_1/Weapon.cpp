@@ -23,40 +23,44 @@ Weapon::~Weapon()
 
 float Weapon::GetDamage(AttacType attackType, float critRateReduction, bool isCritic)
 {
+    float actualDamage = attack;
+    float actualCrit = critRate;
+    float actualCritDam = critDamage;
+
     switch (attackType)
     {
         case AttacType::Fast:
         {
-            attack += 10.0f;
-            critRate *= 0.9;
+            actualDamage += 6.0f;
+            actualCrit *= 0.9;
             break;
         }
         case AttacType::Normal:
         {
-            attack += 16.0f;
-            critRate *= 0.8;
-            critDamage += 8.0f;
+            actualDamage += 12.0f;
+            actualCrit *= 0.8;
+            actualCritDam += 6.0f;
             break;
         }
         case AttacType::Charged:
         {
-            attack += 22.0f;
-            critRate *= 0.7;
-            critDamage += 16.0f;
+            actualDamage += 15.0f;
+            actualCrit *= 0.7;
+            actualCritDam += 9.0f;
             break;
         }
     }
 
-    critRate *= critRateReduction * 10.0f;
+    actualCrit *= critRateReduction;
 
-    float randCrit = (rand() % 10) + 1;
+    float randCrit = (rand() % 100) + 1;
 
-    if (critRate >= randCrit)
+    if (actualCrit >= randCrit)
     {
         isCritic = true;
-        attack += critDamage;
+        actualDamage += actualCritDam;
     }
 
-    return attack;
+    return actualDamage;
 }
 

@@ -58,21 +58,21 @@ WarriosSpawner::WarriosSpawner(float delay)
     {
         case '1':
         {
-            weapon = new Weapon("Spear", WeaponType::Spear, 15.0f, 100.0f, 20.0f);
+            weapon = new Weapon("Spear", WeaponType::Spear, 10.0f, 100.0f, 10.0f);
             warrior->SetWeapon(weapon);
 
             break;
         }
         case '2':
         {
-            weapon = new Weapon("Sword", WeaponType::Spear, 25.0f, 80.0f, 25.0f);
+            weapon = new Weapon("Sword", WeaponType::Spear, 13.0f, 80.0f, 13.0f);
             warrior->SetWeapon(weapon);
 
             break;
         }
         case '3':
         {
-            weapon = new Weapon("Heavy axe", WeaponType::Spear, 32.0f, 60.0f, 58.0f);
+            weapon = new Weapon("Heavy axe", WeaponType::Spear, 16.0f, 60.0f, 20.0f);
             warrior->SetWeapon(weapon);
       
             break;
@@ -114,21 +114,21 @@ WarriosSpawner::WarriosSpawner(float delay)
     {
         case '1':
         {
-            armor = new Armor("Light", ArmorType::Light, 15.0f, 10.0f, 0.4f);
+            armor = new Armor("Light", ArmorType::Light, 15.0f, 10.0f, 0.85f);
             warrior->SetArmor(armor);
 
             break;
         }
         case '2':
         {
-            armor = new Armor("Medium", ArmorType::Medium, 25.0f, 20.0f, 0.6f);
+            armor = new Armor("Medium", ArmorType::Medium, 25.0f, 20.0f, 0.65f);
             warrior->SetArmor(armor);
 
             break;
         }
         case '3':
         {
-            armor = new Armor("Heavy", ArmorType::Heavy, 35.0f, 30.0f, 0.8f);
+            armor = new Armor("Heavy", ArmorType::Heavy, 35.0f, 30.0f, 0.45f);
             warrior->SetArmor(armor);
 
             break;
@@ -137,18 +137,22 @@ WarriosSpawner::WarriosSpawner(float delay)
 
     system("cls");
     DrawFrame(0);
-
-    /*this->warrior = warrior;
-    this->weapon = weapon;
-    this->armor = armor;*/
 }
 
 WarriosSpawner::~WarriosSpawner()
 {
-    cout << "deleeeeeeteeeeeee";
     delete warrior;
     delete weapon;
     delete armor;
+
+    system("cls");
+    DrawFrame(0);
+
+    string output = "Entities deleted!";
+
+    SetCursor((consoleWide / 2) - (output.length() / 2), consoleHeight / 2);
+
+    cout << output << endl << endl;
 }
 
 Warrior WarriosSpawner::GetWarrior()
